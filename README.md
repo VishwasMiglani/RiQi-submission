@@ -17,18 +17,15 @@
 ## Project Metadata
 
 * **Project Title:** RiQi — The Quantum Forensics Lab
-* **Team Name:** `[Your Team Name]`
+* **Team Name:** RiQi
 * **Chosen Track:** Track 1: Quantum Games & Interactive Puzzles
-* **Video Presentation Link:** `[Insert YouTube Unlisted / Google Drive / Loom URL here]` *(Pending video upload)*
-* **Live Demo Timestamp in Video:** `[MM:SS]` *(Pending video upload)*
+* **Video Presentation Link:** 'https://drive.google.com/drive/folders/1bjVEFvaTWyYe5s7xLzZgAaEQqxnxi3n1?usp=sharing'
+* **Live Demo Timestamp in Video:** `[05:30]`
 
 ### Team Members (Max 4 members)
 | Name | Email | GitHub Username |
 | :--- | :--- | :--- |
-| `[Member 1 Name]` | `[Email]` | `[@username]` |
-| `[Member 2 Name]` | `[Email]` | `[@username]` |
-| `[Member 3 Name]` | `[Email]` | `[@username]` |
-| `[Member 4 Name]` | `[Email]` | `[@username]` |
+| Vishwas Miglani | `vishwasmiglani.connect@gmail.com` | `@VishwasMiglani` |
 
 ---
 
@@ -58,7 +55,7 @@
   * **Number of Qubits:** 1 Qubit (Modular 1-qubit process characterization)
   * **Key Gates Used:** Hadamard ($H$), Pauli-Z ($Z$), Identity ($I$), Measurement
   * **Primitives Used:** `qiskit.primitives.StatevectorSampler` and `qiskit.quantum_info.Statevector`
-  * **Other Technologies Used:** Streamlit (Custom Dark Laboratory UI), Matplotlib (High-contrast histogram visualization), Python `unittest` framework
+  * **Other Technologies Used:** Streamlit (Scientific Instrument Console UI), Matplotlib (Scientific dual-series histogram with ideal vs observed frequencies), Python `unittest` framework
 
 ```python
 # Core Qiskit circuit construction in src/quantum_engine.py
@@ -115,8 +112,8 @@ def create_circuit(hidden_gate: str, experiment_choice: str, add_measurement: bo
 
 1. **Clone the repository:**
    ```bash
-   git clone [your-repo-url]
-   cd [your-repo-folder]
+   git clone https://github.com/VishwasMiglani/RiQi-submission.git
+   cd RiQi-submission
    ```
 2. **Install dependencies:**
    ```bash
@@ -182,7 +179,7 @@ def create_circuit(hidden_gate: str, experiment_choice: str, add_measurement: bo
 * **Key Results & Observations:**
   - Verified 100% ideal discrimination in Experiment B ($P(|0\rangle) = 1.0$ for $I$, $P(|1\rangle) = 1.0$ for $Z$).
   - Verified exact zero discrimination in Experiment A ($P(|0\rangle) = 1.0$ for both gates).
-  - All 7 unit tests in `test_quantum_engine.py` passed in $0.095\text{s}$.
+  - All 11 unit tests in `test_quantum_engine.py` passed in $0.18\text{s}$.
 
 * **Critical Reflection on Limitations:**
   - **No Unphysical Quantum Speedup Claim:** Single-qubit circuits are easily simulated classically. RiQi demonstrates basis change and phase interference principles rather than exponential quantum advantage.
