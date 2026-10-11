@@ -47,9 +47,9 @@ class BaselineComparisonResult:
 
 def calculate_mutual_information(p_I_0: float, p_Z_0: float) -> float:
     """Calculates Shannon Mutual Information I(Secret; Measurement) in bits.
-    
+
     Assumes equal prior probability P(Secret = I) = P(Secret = Z) = 0.5.
-    
+
     Args:
         p_I_0: Probability of measuring '0' given hidden gate is I.
         p_Z_0: Probability of measuring '0' given hidden gate is Z.
@@ -60,13 +60,13 @@ def calculate_mutual_information(p_I_0: float, p_Z_0: float) -> float:
     # Joint probabilities P(Secret, Outcome)
     p_I = 0.5
     p_Z = 0.5
-    
+
     p_0_given_I = p_I_0
     p_1_given_I = 1.0 - p_I_0
-    
+
     p_0_given_Z = p_Z_0
     p_1_given_Z = 1.0 - p_Z_0
-    
+
     # Marginal probability of outcome '0' and '1'
     p_out_0 = p_I * p_0_given_I + p_Z * p_0_given_Z
     p_out_1 = p_I * p_1_given_I + p_Z * p_1_given_Z
@@ -139,7 +139,7 @@ if __name__ == "__main__":
     print(f"  Gate I Counts: {benchmark.exp_A_I_counts}")
     print(f"  Gate Z Counts: {benchmark.exp_A_Z_counts}")
     print(f"  Information Gain: {benchmark.exp_A_info_gain_bits} bits (ZERO DISTINGUISHING POWER)")
-    
+
     print("\n[Experiment B: Interference Probe]")
     print(f"  Gate I Counts: {benchmark.exp_B_I_counts}")
     print(f"  Gate Z Counts: {benchmark.exp_B_Z_counts}")

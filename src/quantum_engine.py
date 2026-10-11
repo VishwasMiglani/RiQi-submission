@@ -55,7 +55,7 @@ EXPLANATIONS = {
 @dataclass
 class ExperimentResult:
     """Encapsulates the complete result of a quantum forensics experiment.
-    
+
     Attributes:
         experiment_choice: String identifier for the experiment ('A' or 'B').
         experiment_name: Human-readable description of the experiment probe.
@@ -164,7 +164,7 @@ def calculate_ideal_probabilities(circuit_without_meas: QuantumCircuit) -> Dict[
     """
     sv = Statevector.from_instruction(circuit_without_meas)
     probs = sv.probabilities_dict()
-    
+
     # Ensure both '0' and '1' exist in dictionary formatted cleanly
     p0 = float(np.round(probs.get("0", 0.0), 6))
     p1 = float(np.round(probs.get("1", 0.0), 6))
